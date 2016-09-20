@@ -2,10 +2,17 @@
 
 namespace HeadFirst\Observer;
 
-class CurrentConditionsDisplay implements Observer
+class CurrentConditionsDisplay implements Observer, DisplayElement
 {
     private $temperature;
     private $humidity;
+
+    private $weatherData;
+
+	public function __construct(Subject $weatherData) {
+		$this->weatherData = $weatherData;
+		$weatherData->registerObserver($this);
+	}
 
     public function update($temp, $humidity, $pressure)
     {
