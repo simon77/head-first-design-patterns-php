@@ -2,6 +2,8 @@
 
 namespace test\HeadFirst\Observer;
 
+//use HeadFirst\Observer\
+
 class WeatherDataTest extends \PHPUnit_Framework_TestCase
 {
     /**

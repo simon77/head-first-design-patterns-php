@@ -2,10 +2,10 @@
 
 namespace test\HeadFirst\Strategy;
 
-use HeadFirst\Strategy\DecoyDuck as DecoyDuck;
+use \HeadFirst\Strategy\DecoyDuck as DecoyDuck;
 
 /**
- * Malard test class
+ * Decoy test class
  */
 class DecoyDuckTest extends \PHPUnit_Framework_TestCase
 {
