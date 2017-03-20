@@ -1,11 +1,11 @@
 <?php
 
-namespace test\HeadFirst\Decorator;
+namespace HeadFirst\Decorator;
 
-use \HeadFirst\Decorator\HouseBlend;
-use \HeadFirst\Decorator\Mocha;
-use \HeadFirst\Decorator\Soy;
-use \HeadFirst\Decorator\Whip;
+use HeadFirst\Decorator\HouseBlend;
+use HeadFirst\Decorator\Mocha;
+use HeadFirst\Decorator\Soy;
+use HeadFirst\Decorator\Whip;
 
 class HouseSoyMochaWhipTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace test\HeadFirst\Strategy;
+namespace HeadFirst\Strategy;
 
 use HeadFirst\Strategy\MallardDuck as MallardDuck;
 
 /**
- * Malard test class
+ * Mallard test class
  */
 class MallardDuckTest extends \PHPUnit_Framework_TestCase
 {

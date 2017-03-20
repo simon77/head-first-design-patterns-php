@@ -7,7 +7,7 @@ use HeadFirst\Decorator\Beverage;
 class HouseBlend extends Beverage
 {
 
-    public function HouseBlend()
+    public function __construct()
     {
         $this->description = "House Blend Coffee";
     }

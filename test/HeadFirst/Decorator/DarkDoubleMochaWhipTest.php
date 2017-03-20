@@ -1,6 +1,6 @@
 <?php
 
-namespace test\HeadFirst\Decorator;
+namespace HeadFirst\Decorator;
 
 use \HeadFirst\Decorator\DarkRoast;
 use \HeadFirst\Decorator\Mocha;

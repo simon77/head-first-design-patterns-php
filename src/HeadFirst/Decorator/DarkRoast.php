@@ -7,7 +7,7 @@ use HeadFirst\Decorator\Beverage;
 class DarkRoast extends Beverage
 {
 
-    public function DarkRoast()
+    public function __construct()
     {
         $this->description = "Dark Roast Coffee";
     }

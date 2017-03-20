@@ -1,9 +1,9 @@
 <?php
 
-namespace headfirst\strategy;
+namespace HeadFirst\Strategy;
 
-use headfirst\strategy\QuackBehaviour as QuackBehaviour;
-use headfirst\strategy\FlyBehaviour as FlyBehaviour;
+use HeadFirst\Strategy\QuackBehaviour as QuackBehaviour;
+use HeadFirst\Strategy\FlyBehaviour as FlyBehaviour;
 
 abstract class Duck
 {

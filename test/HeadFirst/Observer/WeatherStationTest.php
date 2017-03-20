@@ -1,6 +1,6 @@
 <?php
 
-namespace test\HeadFirst\Observer;
+namespace HeadFirst\Observer;
 
 class WeatherStationTest extends \PHPUnit_Framework_TestCase
 {

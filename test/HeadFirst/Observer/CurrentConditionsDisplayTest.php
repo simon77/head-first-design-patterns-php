@@ -1,6 +1,6 @@
 <?php
 
-namespace test\HeadFirst\Observer;
+namespace HeadFirst\Observer;
 
 use HeadFirst\Observer\CurrentConditionsDisplay as CurrentConditionsDisplay;
 

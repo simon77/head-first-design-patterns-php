@@ -9,7 +9,7 @@ class Mocha extends CondimentDecorator
 
     private $beverage = null;
 
-    public function Mocha(Beverage $beverage)
+    public function __construct(Beverage $beverage)
     {
         $this->beverage = $beverage;
     }

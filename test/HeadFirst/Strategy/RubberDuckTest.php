@@ -1,11 +1,11 @@
 <?php
 
-namespace test\HeadFirst\Strategy;
+namespace HeadFirst\Strategy;
 
 use HeadFirst\Strategy\RubberDuck as RubberDuck;
 
 /**
- * Malard test class
+ * Rubber test class
  */
 class RubberDuckTest extends \PHPUnit_Framework_TestCase
 {

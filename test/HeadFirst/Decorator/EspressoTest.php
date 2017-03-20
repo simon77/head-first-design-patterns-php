@@ -1,8 +1,8 @@
 <?php
 
-namespace test\HeadFirst\Decorator;
+namespace HeadFirst\Decorator;
 
-use \HeadFirst\Decorator\Espresso;
+use HeadFirst\Decorator\Espresso;
 
 class EspressoTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,4 +1,4 @@
-package headfirst.decorator.starbuzz;<?php
+<?php
 
 namespace HeadFirst\Decorator;
 
@@ -7,5 +7,4 @@ use HeadFirst\Decorator\Beverage;
 abstract class CondimentDecorator extends Beverage
 {
 
-    public abstract function getDescription();
 }

@@ -10,7 +10,7 @@ class Whip extends CondimentDecorator
 
     private $beverage = null;
 
-    public function Whip(Beverage $beverage)
+    public function __construct(Beverage $beverage)
     {
         $this->beverage = $beverage;
     }

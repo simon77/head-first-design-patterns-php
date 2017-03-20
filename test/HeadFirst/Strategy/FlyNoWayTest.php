@@ -1,6 +1,6 @@
 <?php
 
-namespace test\HeadFirst\Strategy;
+namespace HeadFirst\Strategy;
 
 use HeadFirst\Strategy\FlyNoWay as FlyNoWay;
 

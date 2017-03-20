@@ -11,8 +11,4 @@
  */
 
 
-// Define path to application directory
-defined('APPLICATION_PATH')
-    || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../src/'));
-
-require_once APPLICATION_PATH . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';

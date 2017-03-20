@@ -1,11 +1,11 @@
 <?php
 
-namespace test\HeadFirst\Strategy;
+namespace HeadFirst\Strategy;
 
 use HeadFirst\Strategy\RedHeadDuck as RedHeadDuck;
 
 /**
- * Malard test class
+ * Red Headed Duck test class
  */
 class RedHeadDuckTest extends \PHPUnit_Framework_TestCase
 {

@@ -10,7 +10,7 @@ class Milk extends CondimentDecorator
 
     private $beverage = null;
 
-    public function Milk(Beverage $beverage)
+    public function __construct(Beverage $beverage)
     {
         $this->beverage = $beverage;
     }
