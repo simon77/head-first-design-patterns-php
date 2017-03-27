@@ -1,8 +1,6 @@
 <?php
 
-namespace HeadFirst\Observer;
-
-//use HeadFirst\Observer\
+namespace HeadFirst\Observer\WeatherObservable;
 
 class WeatherDataTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,14 +18,12 @@ class WeatherDataTest extends \PHPUnit_Framework_TestCase
 
     public function testWeatherData()
     {
-        $weatherData = new WeatherData();
+        $this->object = new WeatherData();
 
-        $current = new CurrentConditionsDisplay($weatherData);
-
-		$this->assertEquals(
-            'Current conditions: 80.0F degrees and 65.0% humidity',
-            $weatherData->setMeasurements(80, 65, 30.4)
-        );
+        $this->object->setMeasurements(80, 65, 30.4);
+        $this->assertSame(80, $this->object->getTemperature());
+        $this->assertSame(65, $this->object->getHumidity());
+        $this->assertSame(30.4, $this->object->getPressure());
 
     }
 

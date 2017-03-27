@@ -1,6 +1,6 @@
 <?php
 
-namespace HeadFirst\Observer;
+namespace HeadFirst\Observer\Weather;
 
 class CurrentConditionsDisplay implements Observer, DisplayElement
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace HeadFirst\Observer;
+namespace HeadFirst\Observer\Weather;
 
-use HeadFirst\Observer\ForecastDisplay as ForecastDisplay;
+use HeadFirst\Observer\Weather\ForecastDisplay as ForecastDisplay;
 
 class ForecastDisplayTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class ForecastDisplayTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         //TODO fix expectations
-        $weatherData = \Mockery::mock('\HeadFirst\Observer\Subject');
+        $weatherData = \Mockery::mock('\HeadFirst\Observer\Weather\Subject');
         $weatherData->shouldReceive('registerObserver')
 //            ->with(\Mockery::type('ForecastDisplay'))
             ->once();

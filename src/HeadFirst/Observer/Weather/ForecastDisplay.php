@@ -1,6 +1,6 @@
 <?php
 
-namespace HeadFirst\Observer;
+namespace HeadFirst\Observer\Weather;
 
 class ForecastDisplay implements Observer, DisplayElement
 {
@@ -18,6 +18,8 @@ class ForecastDisplay implements Observer, DisplayElement
     {
         $this->lastPressure = $this->currentPressure;
 		$this->currentPressure = $pressure;
+
+        $this->display();
     }
 
     public function display()

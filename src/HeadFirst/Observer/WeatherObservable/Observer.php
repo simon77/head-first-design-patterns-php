@@ -1,6 +1,6 @@
 <?php
 
-namespace HeadFirst\Observer;
+namespace HeadFirst\Observer\WeatherObservable;
 
 interface Observer
 {
