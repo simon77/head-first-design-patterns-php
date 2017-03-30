@@ -1,13 +1,17 @@
-package headfirst.factory.pizzafm;
+<?php
 
-public class NYStyleClamPizza extends Pizza {
+namespace HeadFirst\Factory\Pizzafm;
 
-	public NYStyleClamPizza() {
-		name = "NY Style Clam Pizza";
-		dough = "Thin Crust Dough";
-		sauce = "Marinara Sauce";
- 
-		toppings.add("Grated Reggiano Cheese");
-		toppings.add("Fresh Clams from Long Island Sound");
+class NYStyleClamPizza extends Pizza
+{
+	public function __construct()
+    {
+        parent::__construct();
+
+		$this->name = "NY Style Clam Pizza";
+		$this->dough = "Thin Crust Dough";
+		$this->sauce = "Marinara Sauce";
+        $this->toppings[] = "Grated Reggiano Cheese";
+        $this->toppings[] = "Fresh Clams from Long Island Sound";
 	}
 }

@@ -1,16 +1,21 @@
-package headfirst.factory.pizzafm;
+<?php
 
-public class ChicagoStyleClamPizza extends Pizza {
-	public ChicagoStyleClamPizza() {
-		name = "Chicago Style Clam Pizza";
-		dough = "Extra Thick Crust Dough";
-		sauce = "Plum Tomato Sauce";
- 
-		toppings.add("Shredded Mozzarella Cheese");
-		toppings.add("Frozen Clams from Chesapeake Bay");
+namespace HeadFirst\Factory\Pizzafm;
+
+class ChicagoStyleClamPizza extends Pizza
+{
+	public function __construct()
+    {
+        parent::__construct();
+
+		$this->name = "Chicago Style Clam Pizza";
+		$this->dough = "Extra Thick Crust Dough";
+		$this->sauce = "Plum Tomato Sauce";
+        $this->toppings[] = "Shredded Mozzarella Cheese";
+        $this->toppings[] = "Frozen Clams from Chesapeake Bay";
 	}
- 
-	void cut() {
-		System.out.println("Cutting the pizza into square slices");
+
+    public function cut() {
+        return "Cutting the pizza into square slices";
 	}
 }

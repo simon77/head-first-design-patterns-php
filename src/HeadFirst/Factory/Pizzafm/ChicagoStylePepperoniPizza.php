@@ -1,19 +1,24 @@
-package headfirst.factory.pizzafm;
+<?php
 
-public class ChicagoStylePepperoniPizza extends Pizza {
-	public ChicagoStylePepperoniPizza() {
-		name = "Chicago Style Pepperoni Pizza";
-		dough = "Extra Thick Crust Dough";
-		sauce = "Plum Tomato Sauce";
- 
-		toppings.add("Shredded Mozzarella Cheese");
-		toppings.add("Black Olives");
-		toppings.add("Spinach");
-		toppings.add("Eggplant");
-		toppings.add("Sliced Pepperoni");
+namespace HeadFirst\Factory\Pizzafm;
+
+class ChicagoStylePepperoniPizza extends Pizza
+{
+	public function __construct()
+    {
+        parent::__construct();
+
+		$this->name = "Chicago Style Pepperoni Pizza";
+		$this->dough = "Extra Thick Crust Dough";
+		$this->sauce = "Plum Tomato Sauce";
+        $this->toppings[] = "Shredded Mozzarella Cheese";
+        $this->toppings[] = "Black Olives";
+        $this->toppings[] = "Spinach";
+        $this->toppings[] = "Eggplant";
+        $this->toppings[] = "Sliced Pepperoni";
 	}
- 
-	void cut() {
-		System.out.println("Cutting the pizza into square slices");
+
+    public function cut() {
+        return "Cutting the pizza into square slices";
 	}
 }

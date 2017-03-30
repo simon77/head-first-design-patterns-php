@@ -1,50 +1,61 @@
-package headfirst.factory.pizzafm;
+<?php
 
-import java.util.ArrayList;
+namespace HeadFirst\Factory\Pizzafm;
 
-public abstract class Pizza {
-	String name;
-	String dough;
-	String sauce;
-	ArrayList toppings = new ArrayList();
- 
-	void prepare() {
-		System.out.println("Preparing " + name);
-		System.out.println("Tossing dough...");
-		System.out.println("Adding sauce...");
-		System.out.println("Adding toppings: ");
-		for (int i = 0; i < toppings.size(); i++) {
-			System.out.println("   " + toppings.get(i));
-		}
-	}
-  
-	void bake() {
-		System.out.println("Bake for 25 minutes at 350");
-	}
- 
-	void cut() {
-		System.out.println("Cutting the pizza into diagonal slices");
-	}
-  
-	void box() {
-		System.out.println("Place pizza in official PizzaStore box");
-	}
- 
-	public String getName() {
-		return name;
+abstract class Pizza
+{
+	protected $name;
+	protected $dough;
+	protected $sauce;
+	protected $toppings;
+
+    public function __construct()
+    {
+        $this->toppings = array();
+    }
+
+	public function getName() {
+		return $this->name;
 	}
 
-	public String toString() {
-		StringBuffer display = new StringBuffer();
-		display.append("---- " + name + " ----\n");
-		display.append(dough + "\n");
-		display.append(sauce + "\n");
-		for (int i = 0; i < toppings.size(); i++) {
-			display.append((String )toppings.get(i) + "\n");
-		}
-		return display.toString();
+	public function prepare() {
+        $pizzaString = "Preparing ".$this->name.PHP_EOL;
+        $pizzaString .= "Tossing dough...".PHP_EOL;
+        $pizzaString .= "Adding sauce...".PHP_EOL;
+        $pizzaString .= "Adding toppings: ".PHP_EOL;
+
+        foreach ($this->toppings as $topping) {
+            $pizzaString .= "   ".$topping.PHP_EOL;
+        }
+
+        return $pizzaString;
+
 	}
+
+	public function bake() {
+        return "Bake for 25 minutes at 350";
+	}
+
+	public function cut() {
+        return "Cutting the pizza into diagonal slices";
+	}
+
+	public function box() {
+        return "Place pizza in official PizzaStore box";
+	}
+
+    public function toString()
+    {
+        $pizzaString = '---- '.$this->name.' ----'.PHP_EOL;
+        $pizzaString .= $this->dough.PHP_EOL;
+        $pizzaString .= $this->sauce.PHP_EOL;
+
+        foreach ($this->toppings as $topping) {
+            $pizzaString .= $topping.PHP_EOL;
+        }
+
+        return $pizzaString;
+    }
+
 }
 
- 
- 

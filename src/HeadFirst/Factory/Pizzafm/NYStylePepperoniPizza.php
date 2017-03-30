@@ -1,17 +1,21 @@
-package headfirst.factory.pizzafm;
+<?php
 
-public class NYStylePepperoniPizza extends Pizza {
+namespace HeadFirst\Factory\Pizzafm;
 
-	public NYStylePepperoniPizza() {
-		name = "NY Style Pepperoni Pizza";
-		dough = "Thin Crust Dough";
-		sauce = "Marinara Sauce";
- 
-		toppings.add("Grated Reggiano Cheese");
-		toppings.add("Sliced Pepperoni");
-		toppings.add("Garlic");
-		toppings.add("Onion");
-		toppings.add("Mushrooms");
-		toppings.add("Red Pepper");
+class NYStylePepperoniPizza extends Pizza
+{
+	public function __construct()
+    {
+        parent::__construct();
+
+		$this->name = "NY Style Pepperoni Pizza";
+		$this->dough = "Thin Crust Dough";
+		$this->sauce = "Marinara Sauce";
+        $this->toppings[] = "Grated Reggiano Cheese";
+        $this->toppings[] = "Sliced Pepperoni";
+        $this->toppings[] = "Garlic";
+        $this->toppings[] = "Onion";
+        $this->toppings[] = "Mushrooms";
+        $this->toppings[] = "Red Pepper";
 	}
 }

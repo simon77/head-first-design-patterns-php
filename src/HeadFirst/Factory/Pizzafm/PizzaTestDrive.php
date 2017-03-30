@@ -1,33 +1,31 @@
-package headfirst.factory.pizzafm;
+<?php
+namespace HeadFirst\Factory\Pizzafm;
 
-public class PizzaTestDrive {
- 
-	public static void main(String[] args) {
-		PizzaStore nyStore = new NYPizzaStore();
-		PizzaStore chicagoStore = new ChicagoPizzaStore();
- 
-		Pizza pizza = nyStore.orderPizza("cheese");
-		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
- 
-		pizza = chicagoStore.orderPizza("cheese");
-		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+require __DIR__ . '/../../../../vendor/autoload.php';
 
-		pizza = nyStore.orderPizza("clam");
-		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
- 
-		pizza = chicagoStore.orderPizza("clam");
-		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+$nyStore = new NYPizzaStore();
+$chicagoStore = new ChicagoPizzaStore();
 
-		pizza = nyStore.orderPizza("pepperoni");
-		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
- 
-		pizza = chicagoStore.orderPizza("pepperoni");
-		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+$pizza = $nyStore->orderPizza("cheese");
+echo "Ethan ordered a " . $pizza->getName() . PHP_EOL;
 
-		pizza = nyStore.orderPizza("veggie");
-		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
- 
-		pizza = chicagoStore.orderPizza("veggie");
-		System.out.println("Joel ordered a " + pizza.getName() + "\n");
-	}
-}
+$pizza = $chicagoStore->orderPizza("cheese");
+echo "Joel ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $nyStore->orderPizza("clam");
+echo "Ethan ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $chicagoStore->orderPizza("clam");
+echo "Joel ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $nyStore->orderPizza("pepperoni");
+echo "Ethan ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $chicagoStore->orderPizza("pepperoni");
+echo "Joel ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $nyStore->orderPizza("veggie");
+echo "Ethan ordered a " . $pizza->getName() . PHP_EOL;
+
+$pizza = $chicagoStore->orderPizza("veggie");
+echo "Joel ordered a " . $pizza->getName() . PHP_EOL;

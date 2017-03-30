@@ -1,16 +1,34 @@
-package headfirst.factory.pizzafm;
+<?php
 
-public class ChicagoPizzaStore extends PizzaStore {
+namespace HeadFirst\Factory\Pizzafm;
 
-	Pizza createPizza(String item) {
-        	if (item.equals("cheese")) {
-            		return new ChicagoStyleCheesePizza();
-        	} else if (item.equals("veggie")) {
-        	    	return new ChicagoStyleVeggiePizza();
-        	} else if (item.equals("clam")) {
-        	    	return new ChicagoStyleClamPizza();
-        	} else if (item.equals("pepperoni")) {
-            		return new ChicagoStylePepperoniPizza();
-        	} else return null;
-	}
+use HeadFirst\Factory\Pizzafm\ChicagoStyleCheesePizza as CheesePizza;
+use HeadFirst\Factory\Pizzafm\ChicagoStyleClamPizza as ClamPizza;
+use HeadFirst\Factory\Pizzafm\ChicagoStylePepperoniPizza as PepperoniPizza;
+use HeadFirst\Factory\Pizzafm\ChicagoStyleVeggiePizza as VeggiePizza;
+
+class ChicagoPizzaStore extends PizzaStore
+{
+
+    public function createPizza($item)
+    {
+        switch ($item) {
+            case 'cheese':
+                $pizza = new CheesePizza();
+                break;
+            case 'clam':
+                $pizza = new ClamPizza();
+                break;
+            case 'pepperoni':
+                $pizza = new PepperoniPizza();
+                break;
+            case 'veggie':
+                $pizza = new VeggiePizza();
+                break;
+            default:
+                $pizza = null;
+        }
+        return $pizza;
+    }
 }
+
