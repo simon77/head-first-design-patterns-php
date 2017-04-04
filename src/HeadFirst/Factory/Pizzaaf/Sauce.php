@@ -1,5 +1,8 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public interface Sauce {
-	public String toString();
+namespace HeadFirst\Factory\Pizzaaf;
+
+interface Sauce
+{
+    public function toString();
 }

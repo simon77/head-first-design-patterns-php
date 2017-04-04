@@ -1,5 +1,8 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public interface Dough {
-	public String toString();
+namespace HeadFirst\Factory\Pizzaaf;
+
+interface Dough
+{
+    public function toString();
 }

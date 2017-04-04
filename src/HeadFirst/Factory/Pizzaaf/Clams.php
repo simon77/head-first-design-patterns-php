@@ -2,7 +2,7 @@
 
 namespace HeadFirst\Factory\Pizzaaf;
 
-interface Pepperoni
+interface Clams
 {
     public function toString();
 }
