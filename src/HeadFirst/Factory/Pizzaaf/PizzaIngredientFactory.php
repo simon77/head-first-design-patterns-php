@@ -1,12 +1,13 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public interface PizzaIngredientFactory {
- 
-	public Dough createDough();
-	public Sauce createSauce();
-	public Cheese createCheese();
-	public Veggies[] createVeggies();
-	public Pepperoni createPepperoni();
-	public Clams createClam();
- 
+namespace HeadFirst\Factory\Pizzaaf;
+
+interface PizzaIngredientFactory
+{
+    public function createDough();
+    public function createSauce();
+    public function createCheese();
+    public function createVeggies();
+    public function createPepperoni();
+    public function createClam();
 }
