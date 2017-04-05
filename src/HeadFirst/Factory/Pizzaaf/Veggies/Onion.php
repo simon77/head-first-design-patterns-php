@@ -1,8 +1,12 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public class Onion implements Veggies {
+namespace HeadFirst\Factory\Pizzaaf\Veggies;
 
-	public String toString() {
+use \HeadFirst\Factory\Pizzaaf\Veggies as Veggies;
+
+class Onion implements Veggies
+{
+	public function toString() {
 		return "Onion";
 	}
 }
