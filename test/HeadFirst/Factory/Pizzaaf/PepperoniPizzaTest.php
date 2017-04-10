@@ -2,9 +2,9 @@
 
 namespace HeadFirst\Factory\Pizzaaf;
 
-use HeadFirst\Factory\Pizzaaf\CheesePizza as Pizza;
+use HeadFirst\Factory\Pizzaaf\PepperoniPizza as Pizza;
 
-class CheesePizzaTest extends \PHPUnit_Framework_TestCase
+class PepperoniPizzaTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testPrepare()
@@ -13,9 +13,13 @@ class CheesePizzaTest extends \PHPUnit_Framework_TestCase
         $factory->shouldReceive('createDough')->once()->ordered();
         $factory->shouldReceive('createSauce')->once()->ordered();
         $factory->shouldReceive('createCheese')->once()->ordered();
+        $factory->shouldReceive('createVeggies')->once()->ordered();
+        $factory->shouldReceive('createPepperoni')->once()->ordered();
 
+        $name = 'Pepperoni Pizza';
         $pizza = new Pizza($factory);
+        $pizza->setName($name);
 
-        $this->assertSame('Preparing Cheese Pizza', $pizza->prepare());
+        $this->assertSame('Preparing '.$name, $pizza->prepare());
 	}
 }

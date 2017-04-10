@@ -19,25 +19,26 @@ abstract class Pizza
 
 	abstract function prepare();
 
-//	void bake() {
-//		System.out.println("Bake for 25 minutes at 350");
-//	}
-//
-//	void cut() {
-//		System.out.println("Cutting the pizza into diagonal slices");
-//	}
-//
-//	void box() {
-//		System.out.println("Place pizza in official PizzaStore box");
-//	}
-//
-//	void setName(String name) {
-//		this.name = name;
-//	}
-//
-//	String getName() {
-//		return name;
-//	}
+    public function bake() {
+        return "Bake for 25 minutes at 350";
+	}
+
+	public function cut() {
+        return "Cutting the pizza into diagonal slices";
+	}
+
+	public function box() {
+        return "Place pizza in official PizzaStore box";
+	}
+
+	public function setName($name) {
+        $this->name = $name;
+		return $this->name;
+	}
+
+	public function getName() {
+		return $this->name;
+	}
 //
 //	public String toString() {
 //		StringBuffer result = new StringBuffer();

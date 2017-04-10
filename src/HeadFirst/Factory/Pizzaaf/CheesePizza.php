@@ -17,7 +17,6 @@ class CheesePizza extends Pizza
         $this->dough = $this->ingredientFactory->createDough();
         $this->sauce = $this->ingredientFactory->createSauce();
         $this->cheese = $this->ingredientFactory->createCheese();
-        return 'Preparing Cheese Pizza';
-//		System.out.println("Preparing " + name);
+        return 'Preparing '.$this->name;
 	}
 }

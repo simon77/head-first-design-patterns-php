@@ -1,33 +1,42 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public class ChicagoPizzaStore extends PizzaStore {
+namespace HeadFirst\Factory\Pizzaaf;
 
-	protected Pizza createPizza(String item) {
-		Pizza pizza = null;
-		PizzaIngredientFactory ingredientFactory =
-		new ChicagoPizzaIngredientFactory();
+use HeadFirst\Factory\Pizzaaf\ChicagoPizzaIngredientFactory as IngredientFactory;
 
-		if (item.equals("cheese")) {
+use HeadFirst\Factory\Pizzaaf\CheesePizza as CheesePizza;
+use HeadFirst\Factory\Pizzaaf\ClamPizza as ClamPizza;
+use HeadFirst\Factory\Pizzaaf\PepperoniPizza as PepperoniPizza;
+use HeadFirst\Factory\Pizzaaf\VeggiePizza as VeggiePizza;
 
-			pizza = new CheesePizza(ingredientFactory);
-			pizza.setName("Chicago Style Cheese Pizza");
+class ChicagoPizzaStore extends PizzaStore
+{
+    public function createPizza($item)
+    {
 
-		} else if (item.equals("veggie")) {
+        $pizza = null;
+		$ingredientFactory = new IngredientFactory();
 
-			pizza = new VeggiePizza(ingredientFactory);
-			pizza.setName("Chicago Style Veggie Pizza");
+        switch ($item)
+        {
+            case 'cheese':
+                $pizza = new CheesePizza($ingredientFactory);
+                $pizza->setName("Chicago Style Cheese Pizza");
+                break;
+            case 'veggie':
+                $pizza = new VeggiePizza($ingredientFactory);
+                $pizza->setName("Chicago Style Veggie Pizza");
+                break;
+            case 'clam':
+                $pizza = new ClamPizza($ingredientFactory);
+                $pizza->setName("Chicago Style Clam Pizza");
+                break;
+            case 'pepperoni':
+                $pizza = new PepperoniPizza($ingredientFactory);
+                $pizza->setName("Chicago Style Pepperoni Pizza");
+                break;
+        }
 
-		} else if (item.equals("clam")) {
-
-			pizza = new ClamPizza(ingredientFactory);
-			pizza.setName("Chicago Style Clam Pizza");
-
-		} else if (item.equals("pepperoni")) {
-
-			pizza = new PepperoniPizza(ingredientFactory);
-			pizza.setName("Chicago Style Pepperoni Pizza");
-
-		}
-		return pizza;
+		return $pizza;
 	}
 }

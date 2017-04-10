@@ -14,8 +14,10 @@ class CheesePizzaTest extends \PHPUnit_Framework_TestCase
         $factory->shouldReceive('createSauce')->once()->ordered();
         $factory->shouldReceive('createCheese')->once()->ordered();
 
+        $name = 'Cheese Pizza';
         $pizza = new Pizza($factory);
+        $pizza->setName($name);
 
-        $this->assertSame('Preparing Cheese Pizza', $pizza->prepare());
+        $this->assertSame('Preparing '.$name, $pizza->prepare());
 	}
 }

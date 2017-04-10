@@ -1,29 +1,36 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
- 
-	public Dough createDough() {
-		return new ThinCrustDough();
-	}
- 
-	public Sauce createSauce() {
-		return new MarinaraSauce();
-	}
- 
-	public Cheese createCheese() {
-		return new ReggianoCheese();
-	}
- 
-	public Veggies[] createVeggies() {
-		Veggies veggies[] = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
-		return veggies;
-	}
- 
-	public Pepperoni createPepperoni() {
-		return new SlicedPepperoni();
+namespace HeadFirst\Factory\Pizzaaf;
+
+class NYPizzaIngredientFactory implements PizzaIngredientFactory
+{
+
+	public function createDough() {
+		return new Dough\ThinCrustDough();
 	}
 
-	public Clams createClam() {
-		return new FreshClams();
+	public function createSauce() {
+		return new Sauce\MarinaraSauce();
+	}
+
+	public function createCheese() {
+		return new Cheese\ReggianoCheese();
+	}
+
+	public function createVeggies() {
+        $veggies = array();
+        $veggies[] = new Veggies\Garlic();
+        $veggies[] = new Veggies\Onion();
+        $veggies[] = new Veggies\Mushroom();
+        $veggies[] = new Veggies\RedPepper();
+		return $veggies;
+	}
+
+	public function createPepperoni() {
+		return new Pepperoni\SlicedPepperoni();
+	}
+
+	public function createClam() {
+		return new Clams\FreshClams();
 	}
 }

@@ -1,17 +1,23 @@
-package headfirst.factory.pizzaaf;
+<?php
 
-public class VeggiePizza extends Pizza {
-	PizzaIngredientFactory ingredientFactory;
- 
-	public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
-		this.ingredientFactory = ingredientFactory;
-	}
- 
-	void prepare() {
-		System.out.println("Preparing " + name);
-		dough = ingredientFactory.createDough();
-		sauce = ingredientFactory.createSauce();
-		cheese = ingredientFactory.createCheese();
-		veggies = ingredientFactory.createVeggies();
+namespace HeadFirst\Factory\Pizzaaf;
+
+use HeadFirst\Factory\Pizzaaf\PizzaIngredientFactory as PizzaIngredientFactory;
+
+class VeggiePizza extends Pizza
+{
+	private $ingredientFactory;
+
+    public function __construct(PizzaIngredientFactory $ingredientFactory)
+    {
+        $this->ingredientFactory = $ingredientFactory;
+    }
+
+	public function prepare() {
+        $this->dough = $this->ingredientFactory->createDough();
+        $this->sauce = $this->ingredientFactory->createSauce();
+        $this->cheese = $this->ingredientFactory->createCheese();
+        $this->veggies = $this->ingredientFactory->createVeggies();
+        return 'Preparing '.$this->name;
 	}
 }
